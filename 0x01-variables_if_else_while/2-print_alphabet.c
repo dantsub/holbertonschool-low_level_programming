@@ -7,18 +7,13 @@
  */
 int main(void)
 {
-	char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
-	int size = sizeof(alphabet);
-	int start = 0;
-
-	while (start <= size)
+	for (i=97; i < 123; i++)
 	{
-		putchar(alphabet[start]);
-		if (start == size)
+		putchar(i);
+		if (i == 122)
 		{
 			putchar('\n');
 		}
-		start++;
 	}
 	return (0);
 }
