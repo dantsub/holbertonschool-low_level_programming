@@ -7,7 +7,7 @@
  */
 int main(void)
 {
-	char alphabet[] = {"abcdefghijklmnopqrstuvwxyz"};
+	char alphabet[] = "abcdefghijklmnopqrstuvwxyz";
 	int size = sizeof(alphabet);
 	int start = 0;
 
