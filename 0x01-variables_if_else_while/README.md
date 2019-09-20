@@ -59,4 +59,12 @@ Requirements:
 - All your code should be in the main function
 - You can only use putchar twice in your code
 
+## 5-print_numbers.c
+
+This program prints all single digit numbers of base 10 starting from 0, followed by a new line.
+
+Requirements:
+
+- All your code should be in the *main* function.
+
 
