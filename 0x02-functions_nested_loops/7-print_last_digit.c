@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "holberton.h"
 
 /**
@@ -7,19 +8,9 @@
  */
 int print_last_digit(int n)
 {
-	int o;
-	int m = n % 10;
+	int m;
+	m = abs(n % 10);
 
-	if (m < 0)
-	{
-
-		o = m * -1;
-		_putchar(o + 48);
-		return (-m);
-	}
-	else
-	{
-		_putchar(m + 48);
-		return (m + 48);
-	}
+	_putchar(m + '0');
+	return (m);
 }
