@@ -1,16 +1,17 @@
 #include "holberton.h"
 
 /**
- * main - check the code for Holberton School students.
+ * _islower - checks for lowercase character.
+ * @c: interger parammeter.
  *
- * Return: Always 0.
+ * Return: 0 or 1.
  */
 int _islower(int c)
 {
 	if (c >= 97)
 	{
 		return (1);
-	} 
+	}
 	else
 	{
 		return (0);
