@@ -10,6 +10,7 @@ unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int index, index2, count;
 
+	count = 0;
 	for (index = 0; s[index] != 0; index++)
 	{
 		if (s[index] == ' ')
