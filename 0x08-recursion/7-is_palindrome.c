@@ -22,7 +22,9 @@ int _strlen_recursion(char *s)
 int compare(char *s, int pos_f, int pos_l)
 {
 	if (pos_f > pos_l)
+	{
 		return (1);
+	}
 	else
 	{
 		if (s[pos_f] != s[pos_l])
@@ -41,7 +43,7 @@ int compare(char *s, int pos_f, int pos_l)
 int is_palindrome(char *s)
 {
 	int pos_f, pos_l;
-	
+
 	pos_f = 0;
 	pos_l = _strlen_recursion(s);
 	return (compare(s, pos_f, pos_l - 1));
