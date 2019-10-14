@@ -21,8 +21,11 @@ int main(int argc, char *argv[])
 			printf("Error\n");
 			return (1);
 		}
-		add += atoi(argv[count]);
-		count++;
+		else
+		{
+			add += atoi(argv[count]);
+			count++;
+		}
 	}
 	printf("%d\n",add);
 	return (0);
