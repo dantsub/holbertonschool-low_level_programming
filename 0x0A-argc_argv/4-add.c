@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	int add, count;
 	
 	count = 1;
-	sum = 0;
+	add = 0;
 	
 	while (count < argc)
 	{
