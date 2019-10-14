@@ -10,21 +10,21 @@
 int main(int argc, char *argv[])
 {
 	int add, count;
-	
+
 	count = 1;
 	add = 0;
-	
+
 	while (count < argc)
 	{
-		if (!isdigit(argv[count]))
-		{
-			printf("Error\n");
-			return (1);
-		}
-		else
+		if (isdigit(argv[count]))
 		{
 			add += atoi(argv[count]);
 			count++;
+		}
+		else
+		{
+			printf("Error\n");
+			return (1);
 		}
 	}
 	printf("%d\n",add);
