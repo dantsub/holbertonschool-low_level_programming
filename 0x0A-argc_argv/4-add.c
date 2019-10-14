@@ -9,24 +9,26 @@
   */
 int main(int argc, char *argv[])
 {
-	int add, count;
+	int add, count, sub_c;
 
-	count = 1;
 	add = 0;
-
-	while (count < argc)
+	if (argc < 2)
 	{
-		if (isdigit(argv[count]))
-		{
-			add += atoi(argv[count]);
-			count++;
-		}
-		else
-		{
-			printf("Error\n");
-			return (1);
-		}
+		printf("Error\n");
+		return (0);
 	}
-	printf("%d\n",add);
+	for (count = 1; count < argc; count++)
+	{
+		for (sub_c = 0; argv[count][sub_c] != 0; sub_c++)
+		{
+			if (!isdigit(argv[count][sub_c]))
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		add += atoi(argv[count][sub_c]);
+	}
+	printf("%d\n", add);
 	return (0);
 }
