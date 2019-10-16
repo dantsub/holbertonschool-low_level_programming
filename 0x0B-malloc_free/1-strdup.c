@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "holberton.h"
 /**
-  * create_array - returns a pointer to a newly allocated space in memory,
+  * _strdup - returns a pointer to a newly allocated space in memory,
   * which contains a copy of the string given as a parameter.
   * @str: string.
   *
@@ -14,7 +14,7 @@ char *_strdup(char *str)
 
 	if (str == NULL)
 		return (NULL);
-	for(size = 0; str[size] != 0; size++)
+	for (size = 0; str[size] != 0; size++)
 	{
 	}
 	pointer = malloc(size * sizeof(char));
