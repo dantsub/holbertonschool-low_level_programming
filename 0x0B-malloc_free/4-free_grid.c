@@ -9,12 +9,9 @@
   */
 void free_grid(int **grid, int height)
 {
-	char *pointer;
-	int index, index1, size1, size2;
+	int index;
 
-	if (height <= 0 || *grid == NULL)
-		return (NULL);
-	if (pointer == NULL)
-		return (NULL);
-	return (pointer);
+	for (index = 0; index < height; index++)
+		free(grid[index]);
+	free(grid[index]);
 }
