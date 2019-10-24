@@ -52,10 +52,10 @@ int op_div(int a, int b)
   */
 int op_mod(int a, int b)
 {
-	if (b != 0)
+	if (b == 0)
 	{
-		return (a % b);
+		printf("Error\n");
+		exit(98);
 	}
-	printf("Error\n");
-	exit(98);
+	return (a % b);
 }
