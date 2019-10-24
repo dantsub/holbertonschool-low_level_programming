@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 	b = atoi(argv[3]);
 	c = get_op_func(argv[2]);
 
-	if (c != NULL)
+	if (c == NULL)
 	{
 		printf("Error\n");
 		exit(100);
