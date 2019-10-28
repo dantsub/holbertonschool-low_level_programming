@@ -10,7 +10,7 @@ void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
 /**
-  * struct - struct.
+  * struct type_t - struct.
   * @types: types.
   * @ftype: functions.
   */
