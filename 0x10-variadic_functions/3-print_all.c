@@ -20,7 +20,7 @@ void print_all(const char * const format, ...)
 
 	va_start(arg, format);
 	index = 0;
-	while (format[index] != 0 && format != NULL)
+	while (*(format + index) != 0 && format != NULL)
 	{
 		index1 = 0;
 		while (index1 < 4)
@@ -41,21 +41,19 @@ void print_all(const char * const format, ...)
 /**
   * print_s - print strings.
   * @arg: argument.
-  *
   */
 void print_s(va_list arg)
 {
 	char *string;
 
 	string = va_arg(arg, char *);
-	if (string == 0)
+	if (string == NULL)
 		string = "(nil)";
 	printf("%s", string);
 }
 /**
   * print_c - print char.
   * @arg: argument.
-  *
   */
 void print_c(va_list arg)
 {
@@ -64,7 +62,6 @@ void print_c(va_list arg)
 /**
   * print_i - print interger.
   * @arg: argument.
-  *
   */
 void print_i(va_list arg)
 {
@@ -73,7 +70,6 @@ void print_i(va_list arg)
 /**
   * print_f - print float.
   * @arg: argument.
-  *
   */
 void print_f(va_list arg)
 {
