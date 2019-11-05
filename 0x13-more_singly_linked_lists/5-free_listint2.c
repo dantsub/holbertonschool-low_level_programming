@@ -14,11 +14,9 @@ void free_listint2(listint_t **head)
 		if (*head)
 		{
 			actual = *head;
-			free_listint2(&actual->next);
+			free_listint2(&(*(*head)).next);
 			free(actual);
 		}
 		*head = NULL;
 	}
-	else
-		*head = NULL;
 }
