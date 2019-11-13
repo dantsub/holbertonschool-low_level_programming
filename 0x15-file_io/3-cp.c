@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 	int wr, rd, file1, file2;
 
 	if (argc != 3)
-		dprintf(STDERR_FILENO, "Usage: file_from file_to\n"), exit(97);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 	file1 = open(argv[1], O_RDONLY);
 	if (file1 < 0)
 	{
