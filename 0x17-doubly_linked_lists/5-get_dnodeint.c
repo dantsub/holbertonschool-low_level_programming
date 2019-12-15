@@ -12,9 +12,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	if (index == 0 || !head)
 	{
 		if (!head)
-		{	printf("entro a la primera condición\n");
 			return (NULL);
-		}
 		return (head);
 	}
 	for (count = 0; count < index; count++)
