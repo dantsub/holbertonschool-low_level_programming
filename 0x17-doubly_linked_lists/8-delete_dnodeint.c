@@ -18,13 +18,15 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		return (0);
 	}
 	for (count = 0; count < index - 1; count++)
+	{	if (!cp || !cp->next)
+			return (-1);
 		cp = cp->next;
-	if (!cp || !cp->next)
-		return (-1);
+	}
 	next = cp->next->next;
 	prev = cp->next->prev;
 	free(cp->next);
 	cp->next = next;
-	cp->next->prev = prev;
+	if (cp->next)
+		cp->next->prev = prev;
 	return (1);
 }
