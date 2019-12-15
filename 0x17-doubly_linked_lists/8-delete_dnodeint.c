@@ -17,12 +17,10 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		free(cp);
 		return (0);
 	}
-	for (count = 0; count < index - 1; count++)
-	{
-		if (!cp || !cp->next)
-			return (-1);
+	for (count = 0; cp && count < index - 1; count++)
 		cp = cp->next;
-	}
+	if (!cp || !cp->next)
+		return (-1);
 	next = cp->next->next;
 	free(cp->next);
 	cp->next = next;
