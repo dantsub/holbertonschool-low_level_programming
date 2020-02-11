@@ -20,4 +20,6 @@ int print_sign(int n);         /* Print sign of number */
 int print_last_digit(int);     /* Print the last digit */
 void print_alphabet(void);     /* Print alphabet 1 time */
 void print_alphabet_x10(void); /* Print alphabet 10 times */
+/* Advanced */
+void print_times_table(int n);
 #endif /* _HOLBERTON_H */
