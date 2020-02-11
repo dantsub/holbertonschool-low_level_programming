@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- *
+ * Description: Print lower and upper abc.
  * Return: Always 0 (Success)
  */
 int main(void)

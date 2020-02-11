@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- *
+ * Description: Print abc without e and q.
  * Return: Always 0 (Success)
  */
 int main(void)

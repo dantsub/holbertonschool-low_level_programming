@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- *
+ * Description: Print from 0 to 9 whit ascii.
  * Return: Always 0 (Success)
  */
 int main(void)

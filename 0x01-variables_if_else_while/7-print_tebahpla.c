@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- *
+ * Description: Print abc reverse.
  * Return: Always 0 (Success)
  */
 int main(void)

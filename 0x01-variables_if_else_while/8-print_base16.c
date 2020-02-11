@@ -2,7 +2,7 @@
 
 /**
  * main - Entry point
- *
+ * Description: Print Hexadecimal.
  * Return: Always 0 (Success)
  */
 int main(void)
