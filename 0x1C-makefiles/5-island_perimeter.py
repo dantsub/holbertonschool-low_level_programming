@@ -3,6 +3,7 @@
 Island Perimeter module
 """
 
+
 def island_perimeter(grid):
     """
     Function for mesure perimeter
@@ -10,11 +11,14 @@ def island_perimeter(grid):
     if len(grid) > 0:
         sume = 0
         limit = 0
-        for cl in grid:
-            idx = 0
-            sume += sum(cl)
-            for rw in cl:
-                if (idx > 0 and (cl[idx - 1] and rw)):
-                    limit += 1
-                idx += 1
-        return sume * 4 - limit * 4
+        lg = len(grid)
+        lc = len(grid[0])
+        for c in range(lg):
+            sume += sum(grid[c])
+            for r in range(lc):
+                if grid[c][r]:
+                    if (r > 0 and grid[c][r - 1] == 1):
+                        limit += 1
+                    if (c > 0 and grid[c - 1][r] == 1):
+                        limit += 1
+        return sume * 4 - limit * 2
