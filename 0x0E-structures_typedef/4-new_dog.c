@@ -1,15 +1,17 @@
-#include "dog.h"
 #include <stdlib.h>
+#include <stdio.h>
+#include "dog.h"
 /**
  * _strlen - return the len of string *s
  * @s: a string.
  * Return: len of string.
  */
-int _strlen(char *s)
+unsigned int _strlen(char *s)
 {
-	int len;
+	unsigned int len = 0;
 
-	for (len = 0; s[len]; len++);
+	while (*(s + len))
+		len++;
 	return (len);
 }
 /**
@@ -23,12 +25,14 @@ char *_strcpy(char *s, int len)
 	char *new_s;
 	int i = 0;
 
-	new_s = malloc(sizeof(char) * len);
+	new_s = malloc(sizeof(char) * (len + 1));
 	if (!new_s)
 		return (NULL);
+
 	while (s[i])
 	{
 		new_s[i] = s[i];
+		i++;
 	}
 	new_s[i] = s[i];
 	return (new_s);	
@@ -50,6 +54,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (!d)
 		return (NULL);
 	/* Copy strings */
+	printf("aqui bien\n");
 	cpy_name = _strcpy(name, _strlen(name));
 	cpy_owner = _strcpy(owner, _strlen(owner));
 	/* If fail someone free and return NULL */
