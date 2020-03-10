@@ -1,6 +1,5 @@
-#include <stdlib.h>
-#include <stdio.h>
 #include "dog.h"
+#include <stdlib.h>
 /**
  * _strlen - return the len of string *s
  * @s: a string.
@@ -35,7 +34,7 @@ char *_strcpy(char *s, int len)
 		i++;
 	}
 	new_s[i] = s[i];
-	return (new_s);	
+	return (new_s);
 }
 /**
   * new_dog - creates a new dog.
@@ -48,18 +47,21 @@ char *_strcpy(char *s, int len)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *d;
-	char *cpy_name, *cpy_owner; 
+	char *cpy_name, *cpy_owner;
 
 	d = malloc(sizeof(dog_t));
 	if (!d)
 		return (NULL);
 	/* Copy strings */
-	printf("aqui bien\n");
 	cpy_name = _strcpy(name, _strlen(name));
 	cpy_owner = _strcpy(owner, _strlen(owner));
 	/* If fail someone free and return NULL */
 	if (!cpy_name || !cpy_owner)
 	{	free(d);
+		if (cpy_name)
+			free(cpy_name);
+		if (cpy_owner)
+			free(cpy_owner);
 		return (NULL);
 	}
 	/* Otherwise assing name and owner */
