@@ -3,8 +3,8 @@
 #include <ctype.h>
 /**
   * main - adds positive numbers.
-  * @argc: int.
-  * @argv: parameter type array.
+  * @argc: argument count.
+  * @argv: argument value.
   * Return: 0 or 1.
   */
 int main(int argc, char *argv[])
