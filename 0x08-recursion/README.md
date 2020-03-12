@@ -1,6 +1,6 @@
 # 0x08. C - Recursion
 
-## Resources :books
+## Resources :books:
 
 Read or watch:
 
@@ -12,7 +12,7 @@ Read or watch:
 
 ---
 
-## Learning Objectives :bulb
+## Learning Objectives :bulb:
 
 What you should learn from this project:
 
