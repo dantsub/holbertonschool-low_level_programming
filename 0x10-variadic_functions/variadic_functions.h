@@ -14,7 +14,7 @@ void print_all(const char * const format, ...);
   * @types: types.
   * @ftype: functions.
   */
-typedef struct type_t
+typedef struct type_s
 {
 	char *types;
 	void (*ftype)(va_list);
