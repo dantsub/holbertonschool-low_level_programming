@@ -49,7 +49,8 @@ void print_i(va_list arg)
 void print_all(const char *const format, ...)
 {
 	va_list arg;
-	unsigned int com, index, itype;
+	unsigned int index, itype;
+	char *com = "";
 	type_t type[] = {
 		{"c", print_c},
 		{"s", print_s},
@@ -60,19 +61,17 @@ void print_all(const char *const format, ...)
 
 	index = 0;
 	va_start(arg, format);
-	while (format[index])
+	while (format && format[index])
 	{
 		itype = 0;
 		while (type[itype].types)
 		{
 			if (type[itype].types[0] == format[index])
 			{
-				com = 1;
+				printf("%s", com);
 				type[itype].ftype(arg);
+				com = ", ";
 			}
-			if (format[index + 1] && com)
-				printf(", ");
-			com = 0;
 			itype++;
 		}
 		index++;
