@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdlib.h>
 /**
   * string_nconcat - .
   * @s1: First String.

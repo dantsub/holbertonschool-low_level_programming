@@ -1,5 +1,4 @@
 #include "holberton.h"
-#include <stdlib.h>
 /**
   * array_range - creates an array of integers.
   * @min: value min.
