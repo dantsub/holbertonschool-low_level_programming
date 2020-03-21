@@ -42,7 +42,7 @@ int op_div(int a, int b)
 		return (a / b);
 	}
 	printf("Error\n");
-	exit(98);
+	exit(100);
 }
 /**
   * op_mod - module of two numbers.
@@ -55,7 +55,7 @@ int op_mod(int a, int b)
 	if (b == 0)
 	{
 		printf("Error\n");
-		exit(98);
+		exit(100);
 	}
 	return (a % b);
 }
