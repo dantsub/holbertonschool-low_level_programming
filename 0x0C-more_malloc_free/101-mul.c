@@ -49,7 +49,7 @@ int _isdigit(char *s)
 }
 /**
  * _mul - multiply and save in buff the product.
- * @av: arguments to multiply. 
+ * @av: arguments to multiply.
  * Return: nothing.
  */
 void _mul(char **av)
@@ -78,9 +78,9 @@ void _mul(char **av)
 			}
 			buff[idx + jdx] += dec;
 		}
-		
+
 	}
-	print_mul(buff, len);	
+	print_mul(buff, len);
 }
 /**
  * main - multiply two argument
@@ -96,4 +96,4 @@ int main(int ac, char **av)
 		puts("0"), exit(0);
 	_mul(av);
 	return (0);
-} 
+}
