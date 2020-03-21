@@ -18,6 +18,5 @@ int pop_listint(listint_t **head)
 		*head = actual;
 		return (n);
 	}
-	else
-		return (0);
+	return (0);
 }
