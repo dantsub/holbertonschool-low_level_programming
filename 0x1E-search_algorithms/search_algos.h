@@ -7,8 +7,7 @@
 
 int linear_search(int *array, size_t size, int value);
 int binary_search(int *array, size_t size, int value);
-int binary_recursion(int *array, int value, size_t from, size_t to);
-void print_array(int *array, size_t from, size_t to);
+void print_array(int *array, int first, int last);
 int advanced_binary(int *array, size_t size, int value);
 int jump_search(int *array, size_t size, int value);
 int min(int x, int y);
