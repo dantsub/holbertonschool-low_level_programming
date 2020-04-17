@@ -1,10 +1,10 @@
 #include "search_algos.h"
 /**
- * binary_search -
+ * binary_search - search binary
  * @array: pointer to point first position of array
- * @size:
- * @value:
- * Return:
+ * @size: size of array.
+ * @value: value find.
+ * Return: position.
  */
 int binary_search(int *array, size_t size, int value)
 {
@@ -13,7 +13,7 @@ int binary_search(int *array, size_t size, int value)
 	if (!array)
 		return (-1);
 
-	first = 0, last = (int)size -1;
+	first = 0, last = (int)size - 1;
 
 	while (first <= last)
 	{
