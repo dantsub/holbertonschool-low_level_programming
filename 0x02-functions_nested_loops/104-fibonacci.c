@@ -32,7 +32,7 @@ int main(void)
 			mid1 += 1;
 			mid2 %= 10000000000;
 		}
-		
+
 		printf("%lu%lu", mid1, mid2);
 		if (i != 97)
 			printf(", ");
