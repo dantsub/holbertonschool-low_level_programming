@@ -1,14 +1,14 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * 
+ *
  * Return: 0 Always
  */
 int main(void)
 {
 	int i;
 	unsigned long fibo1 = 0, fibo2 = 1, sum, mid1, mid2;
-	unsigned long fibo1_a,fibo1_b, fibo2_a, fibo2_b;
+	unsigned long fibo1_a, fibo1_b, fibo2_a, fibo2_b;
 
 	for (i = 0; i < 92; i++)
 	{

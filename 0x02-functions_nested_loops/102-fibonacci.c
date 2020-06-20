@@ -1,13 +1,13 @@
 #include <stdio.h>
 /**
  * main - Entry point
- * 
+ *
  * Return: 0 Always
  */
 int main(void)
 {
 	int i;
-	long unsigned int fibo1, fibo2, res;
+	unsigned long fibo1, fibo2, res;
 
 	fibo1 = 0, fibo2 = 1;
 	for (i = 0; i < 50; i++)
