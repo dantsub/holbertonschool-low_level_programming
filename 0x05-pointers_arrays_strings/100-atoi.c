@@ -10,16 +10,16 @@ int _atoi(char *s)
 	unsigned int num;
 
 	num = 0, sign = 1, i = 0;
-	while (s[i] < 48 || s[i] > 57)
+	while (s[i] && (s[i] < 48 || s[i] > 57))
 	{
 		if (s[i] == 45)
 			sign *= -1;
 		i++;
 	}
-	while (s[i] > 47 && s[i] < 58)
+	while (s[i] && (s[i] > 47 && s[i] < 58))
 	{
 		num = (num * 10) + (s[i] - 48);
 		i++;
 	}
-	return (num * sign);
+	return (!num ? 0 : num * sign);
 }
