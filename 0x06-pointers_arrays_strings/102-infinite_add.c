@@ -52,7 +52,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		res = sum / 10;
 		n2--, size_r--;
 	}
+	r[size_r] = res + 48;
 	if (res)
-		r[size_r] = res + 48;
-	return (r + size_r);
+		return (r + size_r);
+	return (r + size_r + 1);
 }
