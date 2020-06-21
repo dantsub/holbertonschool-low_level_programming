@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "holberton.h"
 /**
  * _calloc - allocates memory for an array, using malloc.
@@ -6,9 +5,9 @@
  * @size: size of elements.
  * Return: array.
  */
-void *_calloc(unsigned int nmemb, unsigned int size)
+void *_calloc(int nmemb, int size)
 {
-	unsigned int index;
+	int index;
 	char *pointer;
 
 	if (nmemb == 0 || size == 0)
@@ -29,7 +28,7 @@ int wdslen(char *word)
 {
 	int i = 0;
 
-	while (word[i] != 32)
+	while (word[i] && word[i] != 32)
 		i++;
 	return (i);
 }
@@ -42,7 +41,7 @@ void dfree(char **ptr)
 {
 	int i = 0;
 
-	while (ptr[i])
+	while (ptr && ptr[i])
 		free(ptr[i++]);
 	free(ptr);
 }
@@ -72,29 +71,31 @@ char *_strcpy(char *dest, char *src, int len)
  */
 char **strtow(char *str)
 {
-	char **words;
+	char **words = NULL;
 	int idx, jdx, len, nwords;
 
-	if (!str)
+	if (!str || !(*str))
 		return (NULL);
 	idx = len = nwords = 0;
 	while (str[idx])
 	{
-		if (str[idx] != 32 && str[idx + 1] == 32)
+		if (str[idx] != 32 && (str[idx + 1] == 32 || !str[idx + 1]))
 			nwords++;
 		idx++;
 	}
+	if (!nwords)
+		return (NULL);
 	words = _calloc(nwords + 1, sizeof(char *));
 	if (!words)
 		return (NULL);
 	idx = 0, jdx = 0;
-	while (str[idx])
+	while (str[idx] && jdx < nwords)
 	{
 		if (str[idx] != 32)
 		{
 			len = wdslen(str + idx);
-			words[jdx] = malloc(len + 1 * sizeof(char));
-			if (!words)
+			words[jdx] = malloc((len + 1) * sizeof(char));
+			if (!words[jdx])
 			{
 				dfree(words);
 				return (NULL);
