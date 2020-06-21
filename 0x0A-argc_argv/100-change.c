@@ -22,7 +22,7 @@ int main(int ac, char **av)
 
 	while (idx < 5 && res != back)
 	{
-		div = ((back - lot) / coins[idx]);
+		div = ((back - res) / coins[idx]);
 		if (div > 0)
 		{
 			lot += div;
