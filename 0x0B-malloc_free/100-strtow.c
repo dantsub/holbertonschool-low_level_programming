@@ -101,8 +101,7 @@ char **strtow(char *str)
 				return (NULL);
 			}
 			_strcpy(words[jdx], str + idx, len);
-			jdx++;
-			idx += len;
+			jdx++, idx += len;
 		}
 		idx++;
 	}
